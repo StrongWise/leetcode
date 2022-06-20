@@ -25,9 +25,9 @@ class Solution {
             }
 
             if (nums[left] % 2 == 1 && nums[right] % 2 == 0) {
-                int temp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = temp;
+                nums[left] = nums[left] + nums[right];
+                nums[right] = nums[left] - nums[right];
+                nums[left] = nums[left] - nums[right];
             }
         }
 
